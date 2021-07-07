@@ -1,0 +1,124 @@
+@import "./_fonts.scss";
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_nullstyle.scss";
+
+@media (min-width: 2160px) {
+    html, body {
+        font-size: 18px;
+    }
+}
+
+.total {
+    width: calc(257em/14);
+    margin-top: $vertical-indent;
+    margin-left: $horizontal-indent;
+    @include flex(column, flex-start, flex-start);
+}
+
+.display {
+    width: 100%;
+    margin-bottom: calc(10em/7);
+}
+
+.form {
+    width: 100%;
+    @include flex(row, space-between, center);
+
+    &__field {
+        display: block;
+        width: 100%;
+        padding: 0.125em calc(3em/16);
+        border: 1px solid $grey;
+        border-radius: 8px;
+        font-family: $base-text-font;
+        font-size: calc(16em/7);
+        line-height: 1.4;
+        color: $black;
+        background-color: $white;
+        background-clip: padding-box;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &__field:focus {
+        border-color: $cyan;
+        box-shadow: 0 0 0 calc(1em/16) $cyan-shadow;
+    }
+
+    &__dividing-mark {
+        margin: 0 calc(5em/27);
+        font-size: calc(27em/14);
+    }
+}
+
+.display__screen {
+    width: 100%;
+    padding: 0.25em 0;
+    font-family: $alternative-text-font;
+    font-size: calc(18em/7);
+    @include to-center();
+}
+
+.buttons {
+    width: 100%;
+    @include flex(row, space-between, flex-start);
+
+    &__button-container {
+        width: calc(55em/7);
+        height: calc(22em/7);
+    }
+
+    &__button {
+        @include button-style();
+    }
+}
+
+.button-start {
+    border-color: $green;
+    background-image: url("./../img/play.svg");
+    background-size: calc(10em/7);
+}
+
+.button-start:hover {
+    background-color: $green;
+    background-image: url("./../img/play_alternative.svg");
+}
+
+.button-start:focus {
+    @include button-shadow($green-shadow);
+}
+
+.button-pause {
+    border-color: $yellow;
+    background-image: url("./../img/pause.svg");
+    background-size: calc(10em/7);
+}
+
+.button-pause:hover {
+    background-color: $yellow;
+    background-image: url("./../img/pause_alternative.svg");
+}
+
+.button-pause:focus {
+    @include button-shadow($yellow-shadow);
+}
+
+.button-drop {
+    border-color: $cyan;
+    background-image: url("./../img/drop.svg");
+    background-size: calc(11em/7);
+}
+
+.button-drop:hover {
+    background-color: $cyan;
+    background-image: url("./../img/drop_alternative.svg");
+}
+
+.button-drop:focus {
+    @include button-shadow($cyan-shadow);
+}
+
+.none {
+    display: none;
+}
+

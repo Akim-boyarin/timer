@@ -1,0 +1,253 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Segoe UI';
+  src: url("../fonts/Segoe UI.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* обнуляющие стили для браузеров
+
+/* убрать все дефолтные отступы и границы */
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* определить width и height как суммы 
+размеров содержания, padding'ов и border'ов соответственно */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* убрать линии обводки */
+:focus,
+:active {
+  outline: none;
+}
+
+/* уравнять поведение экрана, шрифтов и элементов для разных браузеров; font-size: 100%; -> font-size: 14px; - непонятно  */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* сделать у форм и кнопок шрифты и размер шрифтов унаследованными от родителей */
+input, button, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* убрать кнопку очистки текста в форме в IE */
+input::-ms-clear {
+  display: none;
+}
+
+/* при наведении на кнопку сделать курсор соответствующим ссылке  */
+button {
+  cursor: pointer;
+}
+
+/* убрать показатель внутреннего фокуса у кнопок в Firefox */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+@media (min-width: 2160px) {
+  html, body {
+    font-size: 18px;
+  }
+}
+
+.total {
+  width: calc(257em/14);
+  margin-top: 30px;
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.display {
+  width: 100%;
+  margin-bottom: calc(10em/7);
+}
+
+.form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__field {
+  display: block;
+  width: 100%;
+  padding: 0.125em calc(3em/16);
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: calc(16em/7);
+  line-height: 1.4;
+  color: #202529;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.form__field:focus {
+  border-color: #00a5b8;
+  -webkit-box-shadow: 0 0 0 calc(1em/16) rgba(9, 145, 172, 0.5);
+          box-shadow: 0 0 0 calc(1em/16) rgba(9, 145, 172, 0.5);
+}
+
+.form__dividing-mark {
+  margin: 0 calc(5em/27);
+  font-size: calc(27em/14);
+}
+
+.display__screen {
+  width: 100%;
+  padding: 0.25em 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: calc(18em/7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.buttons__button-container {
+  width: calc(55em/7);
+  height: calc(22em/7);
+}
+
+.buttons__button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: background-image 0.15s ease-in-out, background-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: background-image 0.15s ease-in-out, background-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: background-image 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-image 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.button-start {
+  border-color: #00a94c;
+  background-image: url("./../img/play.svg");
+  background-size: calc(10em/7);
+}
+
+.button-start:hover {
+  background-color: #00a94c;
+  background-image: url("./../img/play_alternative.svg");
+}
+
+.button-start:focus {
+  -webkit-box-shadow: 0 0 0 0.25em rgba(24, 153, 93, 0.5);
+          box-shadow: 0 0 0 0.25em rgba(24, 153, 93, 0.5);
+}
+
+.button-pause {
+  border-color: #ffbe1b;
+  background-image: url("./../img/pause.svg");
+  background-size: calc(10em/7);
+}
+
+.button-pause:hover {
+  background-color: #ffbe1b;
+  background-image: url("./../img/pause_alternative.svg");
+}
+
+.button-pause:focus {
+  -webkit-box-shadow: 0 0 0 0.25em rgba(255, 193, 7, 0.5);
+          box-shadow: 0 0 0 0.25em rgba(255, 193, 7, 0.5);
+}
+
+.button-drop {
+  border-color: #00a5b8;
+  background-image: url("./../img/drop.svg");
+  background-size: calc(11em/7);
+}
+
+.button-drop:hover {
+  background-color: #00a5b8;
+  background-image: url("./../img/drop_alternative.svg");
+}
+
+.button-drop:focus {
+  -webkit-box-shadow: 0 0 0 0.25em rgba(9, 145, 172, 0.5);
+          box-shadow: 0 0 0 0.25em rgba(9, 145, 172, 0.5);
+}
+
+.none {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

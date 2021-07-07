@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Таймер</title>
+</head>
+
+<body>
+    <div id="app" class="total">
+        <div class="total__display display">
+            <!-- формы ввода значений таймера -->
+            <div class="display__form form">
+                <!-- часы -->
+                <div class="form__field-container">
+                    <input class="form__field form__hours-field" type="number" id="hours" placeholder="00" step="1">
+                </div>
+                <div class="form__dividing-mark">:</div>
+                <!-- минуты -->
+                <div class="form__field-container">
+                    <input class="form__field form__minutes-field" type="number" id="minutes" placeholder="00"
+                        step="1">
+                </div>
+                <div class="form__dividing-mark">:</div>
+                <!-- секунды -->
+                <div class="form__field-container">
+                    <input class="form__field form__seconds-field" type="number" id="seconds" placeholder="00"
+                        step="1">
+                </div>
+            </div>
+            <!-- экран таймера -->
+            <div class="display__screen none">
+                    00 : 00 : 00
+            </div>
+        </div>
+        <div class="total__buttons buttons">
+            <div class="buttons__button-container">
+                <button class="buttons__button button-start" type="button"></button>
+                <button class="buttons__button button-pause none" type="button"></button>
+            </div>
+            <div class="buttons__button-container">
+                <button class="buttons__button button-drop" type="button"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- класс таймера -->
+    <script src="./js/classTimer.js"></script>
+
+    <!-- функции по работе с интерфейсом -->
+    <script src="./js/interfaceFunctions.js"></script>
+
+    <!-- объект таймера -->
+    <script src="./js/objectTimer.js"></script>
+
+    <!-- обработчики полей формы -->
+    <script src="./js/inputsHandlers.js"></script>
+
+    <!-- обработчики кнопок таймера -->
+    <script src="./js/buttonsHandlers.js"></script>
+</body>
+
+</html>
