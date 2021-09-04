@@ -1,5 +1,4 @@
 # Timer
-# Timer
 
 This app was realized with basic conceptions of OOP, like ***class***, ***object***,  ***inheritance***, ***encapsulation***, with using native JavaScript.    
 
