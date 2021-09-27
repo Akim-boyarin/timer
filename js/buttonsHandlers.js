@@ -4,7 +4,7 @@ let dropButton = document.querySelector(".button-drop");
 
 // обработчик старта
 startButton.addEventListener("click", event => { timer.start() });
-// startButton.addEventListener("pointerdown", event => { timer.start() });
+startButton.addEventListener("pointerdown", event => { timer.start() });
 
 // обработчик паузы
 pauseButton.addEventListener("click", event => { timer.pause() });
